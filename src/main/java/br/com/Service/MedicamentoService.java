@@ -1,7 +1,7 @@
 package br.com.Service;
 
 import br.com.model.Medicamento;
-import br.com.repository.MedicamentoRepository;
+import br.com.Repository.MedicamentoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ public class MedicamentoService {
     private MedicamentoRepository medicamentoRepository;
 
     public void save(Medicamento medicamento){
-        [medicamentoRepository.save(medicamento);
+        medicamentoRepository.save(medicamento);
     }
 
     public List<Medicamento> findAll (){

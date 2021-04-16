@@ -1,10 +1,11 @@
 package br.com.controller;
 
+import br.com.Service.MedicamentoService;
 import br.com.constant.Constant;
 import br.com.model.Medicamento;
-import br.com.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -25,8 +26,8 @@ public class MedicamentoController {
     }
 
     @PutMapping(Constant.API_MEDICAMENTO)
-    public void update (@RequestBody Client client){
-        medicamentoService.save(client);
+    public void update (@RequestBody Medicamento medicamento){
+        medicamentoService.save(medicamento);
     }
 
     @DeleteMapping(Constant.API_MEDICAMENTO + "/{id}")
